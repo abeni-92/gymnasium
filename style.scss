@@ -1,0 +1,866 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+$primary-color: #FF0336;
+$secondary-color: black;
+$third-color: white;
+$fourth-color: gray;
+
+html {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: white;
+}
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+	color: black;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.2rem;
+}
+h5 {
+	font-size: 1.1rem;
+}
+h6 {
+	font-size: 1rem;
+}
+p {
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	color: $fourth-color;
+}
+span {
+	font-size: .7rem;
+	color: $fourth-color;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+i {
+	cursor: pointer;
+}
+button {
+	padding: 10px;
+	font-size: 1.4rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+	font-size: 1.1rem;
+	color: $third-color;
+	transition: color 0.3s ease-in-out;
+}
+body {
+	margin: 0;
+}
+nav {
+	background-color: $secondary-color;
+	color: $third-color;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.left {
+		display: flex;
+		gap: 10px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	ul {
+		display: flex;
+		gap: 30px;
+	}
+
+	a:hover {
+		color: $primary-color;
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	i {
+		font-size: 2rem;
+		transition: color 0.3s ease-in;
+	}
+	i:hover {
+		color: $primary-color;
+	}
+
+	button {
+		color: $third-color;
+		background-color: $secondary-color;
+		border: 2px solid $fourth-color;
+		border-radius: 4px;
+		transition: box-shadow 0.3s ease-in;
+	}
+	button:hover {
+		color: $primary-color;
+		box-shadow: 4px 4px 4px $primary-color;
+	}
+}
+
+#home {
+	display: flex;	
+	flex-direction: column;
+	width: 100%;
+	height: 110vh;
+	background-image: url("images/gymm.jpg");
+	background-size: cover;
+	// background-position: 20% 20%;
+	background-repeat: no-repeat;
+
+	h1,h2,h3,h4,h5,h6{
+		color: white;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		width: 40%;
+		margin: auto 50vw;
+
+		p, h2, h5 {
+			padding: 15px 0;
+		}
+
+		button {
+			position: relative;
+			margin-top: 40px;
+			padding: 20px;
+			color: #fff;
+			background-color: #1b1a1a;
+			border: none;
+			transition: background-color 0.3s ease;
+			i {
+				padding: 0 10px;
+			}
+		}
+		
+		button:after{
+			transition: box-shadow 0.4s ease-in;
+			box-sizing: border-box;
+			transition: border 0.5s ease-in;
+			display: block;
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			border-right: 2px solid $primary-color;
+			border-top: 2px solid $primary-color;
+			width: 100%;
+			height: 100%;
+		}
+
+		button:hover {
+			// box-shadow: -2px 2px 4px $primary-color;
+			background-color: #FF0336;
+			color: #fff;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			span {
+				color: white;
+				font-size: 1.4rem;
+				writing-mode: vertical-rl;
+				transform: rotate(180deg);
+			}
+
+			hr {
+				color: #FF0336;
+				transform: rotate(90deg);
+			}
+
+			i {
+				transform: color 0.5s ease-in-out;
+				font-size: 1.3rem;
+			}
+			i:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+}
+
+/**************************** Page 1 section ****************************/
+#page1 {
+	padding: 20px 140px;
+	min-height: 100vh;
+	background-image: url("images/run.jpg");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 100% -60%;
+	
+	h3,h6,h5,p {
+		color: black;
+		padding: 10px;
+	}
+
+	.cards {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		margin-top: -80px;
+		gap: 20px;
+	}
+	.card {
+		// width: 20vw;
+		background-color: white;
+		border: 1px solid rgb(240, 227, 227);
+		border-radius: 30px;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: 80px 40px;
+		cursor: pointer;
+		transition: backgound-color 0.5s ease-in;
+
+		i {
+			color: $primary-color;
+			font-size: 3rem;
+		}
+	}
+	.card:hover {
+		background-image: url("images/home.jpg");
+		h3,h5,p{
+			color: white;
+		}
+	}
+
+	.container {
+		width: 45vw;
+		padding: 80px 0;
+		
+		div {
+			text-align: center;
+			padding: 60px 0;
+			display: flex;
+
+			article {
+				border-right: 1px solid gray;
+			}
+			article:last-child {
+				border-right: none;
+			}
+		}
+		button {
+			padding: 20px;
+			border: none;
+			background-color: rgb(70, 69, 69);
+			color: white;
+			transition: background-color 0.3s ease-in;
+		}
+		button:hover {
+			background-color: $primary-color;
+		}
+	}
+}
+
+/******************** section page2  **********************/
+#page2 {
+	padding: 120px;
+	text-align: center;
+
+	p,h5 {
+		padding: 10px;
+	}
+	p{
+		color: #FF0336;
+	}
+	
+	.container {
+		padding: 80px 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	// .container:first-child, .container:last-child {
+	// 	flex: 2;
+	// } 
+	article {
+		// flex: 1;
+		width: 30%;
+		position: relative;
+
+		img {
+			cursor: pointer;
+			height: 100%;
+			width: 100%;
+			filter: grayscale(100%);
+			overflow: hidden;
+			transition: filter 0.3s ease-in, scale 0.3s ease-in;
+		}
+		
+		img:hover {
+			filter: grayscale(0);
+			box-shadow: 8px 8px 8px rgba($color: #000000, $alpha: 1.0);
+		}
+
+		h5 {
+			color: white;
+			position: absolute;
+			bottom: 20%;
+			left: 20px;
+		}
+		p{
+			position: absolute;
+			bottom: 5%;
+			left: 20px;
+			background-color: #FF0336;
+			color: #FFF;
+			padding: 8px 10px;
+		}
+	}
+	
+}
+
+/***************************** SECTION PAGE3 **********************/
+#page3 {
+	padding: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1b1a1a;
+	gap: 80px;
+
+	h1,h2,h3,h4,h5,h6 {
+		color: #FFF;
+		padding: 10px 0;
+	}
+	h5,em {
+		color: #FF0336;
+	}
+	img.img {
+		width: 50%;
+		object-fit: cover;
+		height: 80vh;
+		border: 4px solid #FF0336;
+	}
+
+	.right {
+		padding: 40px 0;
+		display: grid;
+		grid-template-columns: 250px 250px;
+		grid-template-rows: 1fr 1fr;
+		gap: 20px;
+
+		div {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		img {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	button {
+		padding: 20px;
+		color: #FFF;
+		background-color: rgb(78, 77, 77);
+		border: none;
+		transition: background-color 0.3s ease-in;
+	}
+	button:hover {
+		background-color: #FF0336;
+	}
+}
+
+/************************** SECTION TRAINERS ****************************/
+#trainers {
+	padding: 100px;
+	text-align: center;
+
+	h5 {
+		color: #FF0336;
+		padding: 20px;
+	}
+	p {
+		width: 30vw;
+		margin: 0 auto;
+		padding-top: 10px;
+	}
+
+	.container {
+		padding: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 20px;
+
+		.item {
+			box-shadow: 2px 2px 6px rgba($color: #FF0336, $alpha: 1.0);
+			padding-bottom: 40px;
+			transition: transform 0.3s ease-in;
+
+			p {
+				padding-bottom: 15px;
+			}
+			
+			div {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				i {
+					color: gray;
+				}
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+		.item:hover {
+			transform: translateY(-20px);
+			transform: scale(1.1);
+			box-shadow: 6px 6px 6px rgba($color: #FF0336, $alpha: 1.0);
+			cursor: pointer;
+		}
+	}
+}
+
+/********************************** Section testimonials *****************************************/
+#testimonials {
+	background-color: #eee;
+	padding: 60px 40px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+
+	h2 {
+		color: #FF0336;
+	}
+	.testimonial {
+		padding: 30px;
+		margin-top: 10%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		border: 12px solid #ddd;
+		
+		img {
+			border-top-right-radius: 50%;
+			margin-top: -30%;
+			z-index: 0;
+		}
+		
+		.quote {
+			position: relative;
+			text-align: left;
+			background-color: $secondary-color;
+			margin-left: -20px;
+			padding: 40px 100px;
+
+			h5, h4 {
+				color: #FFF;
+			}
+			p {
+				padding: 10px 0 30px 0;
+			}
+			i {
+				font-size: 3rem;
+			}
+
+			.arrows {
+				color: #000000;
+				position: absolute;
+				bottom: 20px;
+				right: 40px;
+
+				i { 
+					background-color: #ddd;
+					font-size: 1rem;
+					padding: 15px;
+					margin-right: 10px;
+					transition: background-color 0.3s ease;
+				}
+				i:hover {
+					background-color: #FF0336;
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	.logos {
+		padding: 80px;
+		img {
+			transition: filter 0.3s ease;
+		}
+		img:hover {
+			cursor: pointer;
+			filter: invert(100);
+		}
+	}
+}
+
+/****************************** Section gallery ************************************/
+#gallery {
+	padding: 120px 40px;
+	text-align: center;
+
+	h3 {
+		color: #FF0336;
+		padding: 10px 0;
+	}
+	p {
+		margin: auto;
+		width: 50vw;
+		padding: 20px 0;
+		line-height: 1.5rem;
+	}
+
+	.pics {
+		padding: 20px 40px;
+		display: grid;
+		justify-content: center;
+		// grid-template: 200px 200px 200px / 200px 200px 200px 200px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 200px;
+		gap: 10px;
+	
+		.item1 {
+			background-image: url("images/pic1.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 1;
+  			grid-row-end: 3; 
+		}
+		.item2 {
+			background-image: url("images/pic2.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 20% 40%;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			grid-row-start: 1;
+  			grid-row-end: 2;
+		}
+		.item3 {
+			background-image: url("images/pic3.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			grid-row-start: 2;
+  			grid-row-end: 4;
+		}
+		.item4 {
+			background-image: url("images/pic4.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 3;
+  			grid-row-end: 4;
+		}
+		.item5 {
+			background-image: url("images/pic5.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 20% 40%;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 3;
+  			grid-row-end: 4;
+		}
+	}
+}
+
+/********************* Section BMI ***************************/
+#bmi {
+	background-color: #000000;
+	padding: 60px;
+	text-align: center;
+
+	em {
+		color: #FF0336;
+	}
+	h1, h5 {
+		color: #FFF;
+		// padding: 10px 0;
+	}
+	p {
+		width: 35vw;
+		padding: 40px 0;
+		margin: 0 auto;
+	}
+	span {
+		color: #FF0336;
+		font-size: 1.2rem;
+	}
+	.bmis {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+
+		input {
+			padding: 15px 50px;
+			border: 2px solid #464546;
+			background-color: #1b1a1a;
+			margin-bottom: 30px;
+		}
+	}
+	button {
+		margin-top: 30px;
+		padding: 10px 25px;
+		background-color: #1b1a1a;
+		border: none;
+		color: #eee;
+		transition: background-color 0.3s ease;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+	button:hover {
+		background-color: #FF0336;
+	}
+}
+/*********************** Section pricing *************************/
+#pricing {
+	padding: 80px 60px;
+	text-align: center;
+	background-color: #eee;
+
+	h3 {
+		color: #FF0336;
+		padding: 30px 0;
+	}
+
+	.text {
+		width: 45vw;
+		padding: 15px 0;
+		margin: 0 auto;
+	}
+
+	.cards {
+		padding-top: 60px;
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+
+		.card {
+			background-color: #fff;
+
+			img {
+				filter: grayscale(100);
+				transition: filter 0.3s ease;
+			}
+			
+			.top:hover {
+				img {
+					filter: grayscale(0);
+				}
+				h4 {
+					color: #FF0336;
+					transition: color 0.3s ease;
+				}
+			}
+				
+			.bottom {
+				padding: 40px 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				gap: 20px;
+			}
+
+			button {
+				padding: 10px 20px;
+				color: #fff;
+				background-color: #464546;
+				border: none;
+				width: auto;
+				margin: 0 auto;
+				transition: background-color 0.3s ease;
+
+				i {
+					padding: 0 10px;
+				}
+			}
+
+			button:hover {
+				background-color: #FF0336;
+			}
+		}
+	}
+}
+
+/**************************** Section recent ********************************/
+#recent {
+	padding: 80px;
+	text-align: center;
+	background-color: #fafafa;
+
+	h4 {
+		color: #FF0336;
+		padding: 20px 0;
+	}
+
+	.desc {
+		padding: 20px 0;
+		margin: 0 auto;
+		width: 45vw;
+	}
+
+	.container {
+		padding: 40px 0;
+		display: flex;	
+		gap: 20px;
+		.item {
+			padding: 60px 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			text-align: start;
+			background-color: #fff;
+			box-shadow: 2px 2px 6px #1f1d1d;
+
+			.date {
+				padding: 10px;
+				border: 1px solid #222;
+				border-radius: 20px;
+				margin-bottom: 20px;
+			}
+
+			p {
+				padding: 30px 0;
+			}
+
+			button {
+				background-color: #FF0336;
+				color: #fff;
+				border: none;
+
+				i {
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}
+
+/*************************** Section trainer *******************************/
+#trainer {
+	height: auto;
+	padding: 80px;
+	background-color: #000;
+	background-image: url("images/trainer.png");
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	span {
+		color: #FF0336;
+		font-size: 2rem;
+		padding: 10px 10px 10px 0;
+	}
+	h1, h3 {
+		color: #fff;
+	}
+	button {
+		margin-top: 40px;
+		background-color: #1b1a1a;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		transition: background-color 0.3s ease;
+	}
+
+	button:hover {
+		background-color: #FF0336;
+	}
+}
+
+/************************* Section footer **********************************/
+#footer {
+	padding: 100px;
+	display: flex;
+	gap: 100px;
+	a, i {
+		color: #777;
+	}
+
+	a:hover {
+		color: #FF0336;
+		font-weight: 600;
+	}
+	
+	.left {
+		display: flex;
+		gap: 10px;
+		text-align: center;
+		cursor: pointer;
+		padding: 20px 0;
+
+		p {
+			line-height: 1.6rem;
+		}
+	}
+
+	.icons {
+		display: flex;
+		padding: 20px 0;
+		gap: 20px;
+		i {
+			padding: 10px;
+			background-color: #eee;
+			border-radius: 50%;
+			transition: color 0.3s ease, backgound-color 0.3s ease;
+		}
+		i:hover {
+			background-color: #FF0336;
+			color: #fff;
+		}
+	}
+
+	.item {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		h3 {
+			position: relative;
+		}
+		h3:after {
+			position: absolute;
+			content: '';
+			height: 4px;
+			width: 25%;
+			background: #FF0336;
+			bottom: -10px;
+			left: 0;
+		} 
+	}
+
+	
+	.one {
+		flex: 2;
+	}
+
+}
