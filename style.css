@@ -832,13 +832,8 @@ body {
 /*************************** About Page *****************************/
 /*************************** section header ********************************/
 #header {
-<<<<<<< HEAD
   background-image: url("../images/about.jpg");
-  background-size: 100%;
-=======
-  background-image: url("../images/build.jpg");
   background-size: cover;
->>>>>>> b63e6fa8be8585ced43b571df877e5f80bc5af1e
   background-repeat: no-repeat;
   height: 45vh;
   position: relative;
