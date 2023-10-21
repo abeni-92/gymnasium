@@ -379,7 +379,7 @@ body {
 		color: #FF0336;
 	}
 	.img {
-		width: 50%;
+		width: 40vw;
 		object-fit: cover;
 		height: 80vh;
 		border: 4px solid #FF0336;
@@ -436,6 +436,7 @@ body {
 		gap: 20px;
 
 		.item {
+			overflow: hidden;
 			box-shadow: 2px 2px 6px rgba($color: #FF0336, $alpha: 1.0);
 			padding-bottom: 40px;
 			transition: transform 0.3s ease-in;
@@ -456,13 +457,19 @@ body {
 			img {
 				width: 100%;
 				height: 100%;
+				min-height: 300px;
 				margin-bottom: 20px;
+				transition: transform .3s ease-in-out;
+				object-fit: cover;
+			}
+			img:hover {
+				transform: scale(1.2);
 			}
 		}
 
 		.item:hover {
 			transform: translateY(-20px);
-			transform: scale(1.1);
+			transform: scale(1.01);
 			box-shadow: 6px 6px 6px rgba($color: #FF0336, $alpha: 1.0);
 			cursor: pointer;
 		}
@@ -652,6 +659,7 @@ body {
 	.bmis {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 20px;
 
 		input {
@@ -910,7 +918,7 @@ body {
 
 /*************************** section header ********************************/
 #header {
-	background-image: url("../images/about.jpg");
+	background-image: url("images/about.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 45vh;
@@ -992,7 +1000,7 @@ body {
 
 /************************ section whoweare***************************/
 #whoweare {
-	background-image: url("../images/whoweare.png");
+	background-image: url("images/whoweare.png");
 	background-repeat: no-repeat;
 	background-size: 40%;
 	background-position: 85% 40%;
@@ -1363,7 +1371,7 @@ body {
 		}
 
 		.gymat {
-			background-image: url("../images/gymat.png");
+			background-image: url("images/gymat.png");
 			background-size: 100%;
 			background-repeat: no-repeat;
 			height: 100%;
@@ -1952,10 +1960,11 @@ body {
 		padding: 20px;
 		.img {
 			width: 100%;
+			height: 50vh;
 		}
 		
 		.right {
-			grid-template-columns: auto auto;
+			grid-template-columns: 250px;
 			grid-template-rows: 1fr 1fr;
 		}
 	}
@@ -1971,6 +1980,21 @@ body {
 	}
 
 	#testimonials {
+		.testimonial {
+			.quote {
+				padding: 20px;
+				p {
+					padding: 0;
+				}
+				.name {
+					margin-bottom: 60px;
+				}
+				.arrows {
+					left: 20px;
+					bottom: 10px;
+				}
+			}
+		}
 		.logos {
 			padding: 40px;
 			img {
@@ -2001,7 +2025,7 @@ body {
 
 		.bmis {
 			input {
-				padding: 20px;
+				padding: 15px;
 			}
 		}
 	}
